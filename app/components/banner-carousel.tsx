@@ -4,36 +4,40 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import banner1 from '@/app/images/banner/banner1.jpg'
+import banner2 from '@/app/images/banner/banner2.jpg'
+import banner3 from '@/app/images/banner/banner3.jpg'
+import { StaticImageData } from 'next/image'
 
 interface CarouselItem {
   id: number
   heading: string
   subheading: string
-  imageUrl: string
+  imageUrl: StaticImageData
 }
 
 const carouselItems: CarouselItem[] = [
   {
     id: 1,
-    heading: "Welcome to Our World",
-    subheading: "Discover amazing experiences",
-    imageUrl: "/placeholder.svg?height=1080&width=1920"
+    heading: "Transforming Jigawa State Digital Economy",
+    subheading: "Empowering the future of our state",
+    imageUrl: banner1
   },
   {
     id: 2,
-    heading: "Innovate with Us",
-    subheading: "Pushing boundaries, creating futures",
-    imageUrl: "/placeholder.svg?height=1080&width=1920"
+    heading: "Improving transparency and accountability",
+    subheading: "Innovative solutions for a better tomorrow",
+    imageUrl: banner2
   },
   {
     id: 3,
-    heading: "Embrace the Journey",
-    subheading: "Every step counts towards success",
-    imageUrl: "/placeholder.svg?height=1080&width=1920"
+    heading: "Educating and empoering the youth",
+    subheading: "Building a brighter future for all",
+    imageUrl: banner3
   }
 ]
 
-export default function AnimatedCarousel() {
+export default function BannerCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextSlide = () => {
@@ -53,7 +57,7 @@ export default function AnimatedCarousel() {
   }, [])
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative h-screen mt-10 w-full overflow-hidden">
       <AnimatePresence initial={false} custom={currentIndex}>
         {carouselItems.map((item, index) => (
           <motion.div
@@ -66,7 +70,7 @@ export default function AnimatedCarousel() {
           >
             <div
               className="h-full w-full bg-cover bg-center"
-              style={{ backgroundImage: `url(${item.imageUrl})` }}
+              style={{ backgroundImage: `url(${item.imageUrl.src})` }}
             >
               <div className="flex h-full w-full items-center justify-center bg-black bg-opacity-50">
                 <div className="text-center">

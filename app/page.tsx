@@ -31,6 +31,7 @@ import geo from '@/app/images/Geography.png'
 // import socialregister from '@/app/images/socialregister.png'
 // import womenAffairs from '@/app/images/women_affairs1.png'
 import './styles.css'
+import BannerCarousel from "./components/banner-carousel";
 
 const ministries =  [
   {
@@ -150,8 +151,11 @@ interface Card {
 
 export default function Home() {
   return (
-    <div className=" flex flex-col bg-white space-y-10 w-full">
-      <div className=" w-full max-w-6xl mx-auto md:h-[90vh] pt-[200px] text-center items-center justify-center">
+    <div className=" flex flex-col space-y-10 w-full">
+
+      <BannerCarousel />
+      
+      <div className=" w-full max-w-6xl mx-auto pt-[50px] text-center items-center justify-center">
        <div className=" flex px-6 flex-col space-y-4 justify-center bg my-auto items-center">
         <Image src={jigawalogo} className=" h-36 w-36 rounded-full border-green-600 border-4" alt="" width={700} height={700} />
        <h1 className=" text-2xl md:text-3xl font-semibold text-green-500 font-poppins ">Welcome to Jigawa State ICT and Digital Economy Service Portal </h1>

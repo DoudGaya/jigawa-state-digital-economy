@@ -20,7 +20,7 @@ const Topnav = () => {
         <div className=" max-w-7xl mx-auto flex justify-between ">
           <Link href={''} className=' flex space-x-3 items-center'>
           <Image src={jigawalogo} alt='' className=' h-12 w-12 border-2 border-green-400 rounded-full' width={700} height={700} />
-            <p className='font-poppins font-semibold '>JG Ditials</p>
+            <p className='font-poppins font-semibold '>JG State Digital Economy</p>
           </Link>
 
           <div className=" md:flex space-x-3 hidden items-center">
