@@ -45,6 +45,28 @@ const ministries =  [
     name: "Education Management System",
     image: emis
   },
+
+  {
+    id: 4,
+    url: "https://oneapi.api.jg.gov.ng",
+    name: "Jigawa One Government Portal",
+    image: oneGp
+  },
+
+  {
+    id: 12,
+    url: "https://hemis.jg.gov.ng",
+    name: "Health Management Information System",
+    image: hmis
+  },
+  
+  {
+    id: 5,
+    url: "https://land.jg.gov.ng",
+    name: "Ministry of Land and Housing",
+    image: land
+  },
+
   
   {
     id: 3,
@@ -52,19 +74,9 @@ const ministries =  [
     name: "Ministry of Budget",
     image: budget
   },
-  {
-    id: 4,
-    url: "https://api.jg.gov.ng",
-    name: "Jigawa One Government Portal",
-    image: oneGp
-  },
+ 
 
-  {
-    id: 5,
-    url: "https://land.jg.gov.ng",
-    name: "Ministry of Land and Housing",
-    image: land
-  },
+  
   {
     id: 6,
     url: "",
@@ -102,12 +114,7 @@ const ministries =  [
     name: "Climate Change and Digital Energy Information System",
     image: climate
   },
-  {
-    id: 12,
-    url: "",
-    name: "Health Management Information System",
-    image: hmis
-  },
+ 
   {
     id: 13,
     url: "",
@@ -157,7 +164,7 @@ export default function Home() {
             ministries.map((item: Card) => {
               return (
                 <div className="" key={item.id}>
-                <a href="https://www.jigawastate.gov.ng/" className="product-item h-full rounded-lg">
+                <a href={item.url} target="_blank" className="product-item h-full rounded-lg">
                     <div className="product-item-image w-full items-center flex justify-center">
                         <Image width={1000} height={1000} className=" h-[120px] object-center object-contain w-[120px]" src={item.image} alt="" />
                         <div className="product-item-image-hover">
