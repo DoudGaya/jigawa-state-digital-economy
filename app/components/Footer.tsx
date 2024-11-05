@@ -5,11 +5,11 @@ import React from 'react'
 import logo from '@/app/assets/images/gigital-economy-logo.jpg'
 // import Link from 'next/link'
 
-interface LinksUrls {
-    id: number,
-    title: string 
-    url: string
-}
+// interface LinksUrls {
+//     id: number,
+//     title: string 
+//     url: string
+// }
 
 // const loginLinks = [
 //     {
