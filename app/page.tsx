@@ -1,10 +1,8 @@
 import Image, { StaticImageData } from "next/image";
 import './styles.css'
-import BannerCarousel from "./components/banner-carousel";
 import { ministries } from "@/lib/exports";
 import homeBanner from '@/app/assets/images/home-banner.png'
-import { Button } from "@/components/ui/button"
-import { ArrowRight, BarChart2, Cpu, Globe, Smartphone } from "lucide-react"
+import { BarChart2, Cpu, Globe, Smartphone } from "lucide-react"
 import jigawaLogo from '@/app/assets/images/jigawa-state.jpg'
 import Link from "next/link"
 
@@ -88,7 +86,20 @@ export default function Home() {
           </div>
         </section>
 
-    <div className=" w-full  max-w-7xl mx-auto">
+
+    <div className=" w-full  max-w-7xl flex flex-col mx-auto">
+          <div className=" flex flex-col px-10 py-12 rounded-md mx-auto max-w-4xl">
+              <h1 className=" font-poppins font-bold text-xl text-center py-4">Jigawa State MDA's Digitalization</h1>
+              <p className=" font-poppins text-center text-sm md:text-base text-gray-600">
+                We are onboarding Jigawa State MDA's into our digital transformation journey. We have a centralized platform for all government services to improve efficiency and transparency and accountability.
+                The <Link className=" text-green-700 px-0.5 font-semibold hover:text-white hover:bg-green-600 " href={'/oneapi'}>OneAPI</Link>
+              </p>
+
+              <div className=" flex flex-col md:flex-row w-full space-y-4 md:space-y-0 space-x-0 md:space-x-4 py-3 items-center justify-center">
+                <Link className="border-green-500 border w-full text-center px-3 py-2 rounded-md font-poppins " href={'/oneapi'}>Learn More</Link>
+                <Link href={'https://oneapi.api.jg.gov.ng'} className=" bg-green-500 w-full text-center px-3 py-2 rounded-md font-poppins text-white " target="_blank">Get Started</Link>
+              </div>
+          </div>
         <div className=" grid grid-cols-1 md:grid-cols-4 px-4 gap-4 ">
            {
             ministries.map((item: Card) => {

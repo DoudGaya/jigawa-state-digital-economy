@@ -13,8 +13,6 @@ import {
 
 
 
-
-
 const Topnav = () => {
   return (
     <div className=' w-full shadow-md py-3 fixed top-0 z-10 bg-white px-4 border-b'>
@@ -24,10 +22,11 @@ const Topnav = () => {
             {/* <p className='font-poppins font-semibold '></p> */}
           </Link>
 
-          <div className=" md:flex space-x-3 hidden items-center">
+          <div className=" md:flex space-x-6 hidden items-center">
               <Link href={''} className=' font-poppins font-semibold'>Home</Link>
-              <Link href={'/management'} className=' font-poppins font-semibold'>Maganement</Link>
+              <Link href={'/about'} className=' font-poppins font-semibold'>About</Link>
               <Link href={'/activities'} className=' font-poppins font-semibold'>Activities</Link>
+              <Link href={'/oneapi'} className=' font-poppins font-semibold bg-green-500 px-4 py-2 rounded-md text-white'>OneAPI</Link>
           </div>
           <div className=" flex md:hidden items-center">
           <Sheet>

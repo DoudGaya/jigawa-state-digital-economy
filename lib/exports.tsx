@@ -33,6 +33,47 @@ import geo from '@/app/images/Geography.png'
 // import womenAffairs from '@/app/images/women_affairs1.png'
 
 
+
+export const socialLinks = [
+    {
+        id: 1,
+        name: "Facebook",
+        url: "https://web.facebook.com/jigawa.digital.economy",
+        icon: "fa fa-facebook",
+    },
+    {
+        id: 2,
+        name: "Twitter",
+        url: "#",
+        icon: "fa fa-twitter",
+    },
+    {
+        id: 3,
+        name: "Instagram",
+        url: "#",
+        icon: "fa fa-instagram",
+    },
+    {
+        id: 4,
+        name: "Youtube",
+        url: "#",
+        icon: "fa fa-youtube",
+    },
+    {
+        id: 5,
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/company/jigawa-state-government",
+        icon: "fa fa-linkedin",
+    },
+    {
+        id: 6,
+        name: "Website",
+        url: "https://www.jigawastate.gov.ng",
+        icon: "fa fa-globe",
+    }
+]
+
+
 export const ministries =  [
     {
       id: 1,
@@ -129,13 +170,13 @@ export const ministries =  [
       image: basic
     },
     {
-      id: 10,
+      id: 15,
       url: "",
       name: "Ministry of Budget",
       image: budget
     },
     {
-      id: 10,
+      id: 16,
       url: "",
       name: "Jigawa Geographic Information System",
       image: geo
