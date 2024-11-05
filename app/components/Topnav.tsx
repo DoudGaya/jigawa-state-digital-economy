@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import jigawalogo from '@/app/images/jigawalogo.jpg'
+import jigawaLogo from '@/app/assets/images/gigital-economy-logo.jpg'
 
 
 import {
@@ -19,14 +20,14 @@ const Topnav = () => {
     <div className=' w-full shadow-md py-3 fixed top-0 z-10 bg-white px-4 border-b'>
         <div className=" max-w-7xl mx-auto flex justify-between ">
           <Link href={''} className=' flex space-x-3 items-center'>
-          <Image src={jigawalogo} alt='' className=' h-12 w-12 border-2 border-green-400 rounded-full' width={700} height={700} />
-            <p className='font-poppins font-semibold '>JG State Digital Economy</p>
+          <Image src={jigawaLogo} alt='' className=' h-12 object-contain max-w-max object-left rounded-full' width={700} height={700} />
+            {/* <p className='font-poppins font-semibold '></p> */}
           </Link>
 
           <div className=" md:flex space-x-3 hidden items-center">
               <Link href={''} className=' font-poppins font-semibold'>Home</Link>
-              <Link href={''} className=' font-poppins font-semibold'>Solutions</Link>
-              <Link href={''} className=' font-poppins font-semibold'>Maganement</Link>
+              <Link href={'/management'} className=' font-poppins font-semibold'>Maganement</Link>
+              <Link href={'/activities'} className=' font-poppins font-semibold'>Activities</Link>
           </div>
           <div className=" flex md:hidden items-center">
           <Sheet>

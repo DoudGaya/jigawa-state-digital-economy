@@ -1,146 +1,14 @@
 import Image, { StaticImageData } from "next/image";
-
-import oneGp from '@/app/images/1GP.png'
-import agric from '@/app/images/Agriculture.png'
-import climate from '@/app/images/Climate.png'
-import emis from '@/app/images/EMiS.png'
-import hmis from '@/app/images/HMIS.png'
-import subeb from '@/app/images/SUBEB.png'
-import basic from '@/app/images/basiceducation1.png'
-import budget from '@/app/images/budget1.png'
-import finance from '@/app/images/finance1.png'
-import information from '@/app/images/information.png'
-import jigawalogo from '@/app/images/jigawalogo.jpg'
-import jgwebsite from '@/app/images/jgwebsite1.png'
-import land from '@/app/images/land1.png'
-import specialduties from '@/app/images/specialduties.png'
-import water from '@/app/images/water.png'
-import geo from '@/app/images/Geography.png'
-// import engage from '@/app/images/Engagement.png'
-// import amis from '@/app/images/AMIS.png'
-// import stb from '@/app/images/STB.png'
-// import tech from '@/app/images/TECHNOLOGY.png'
-// import claimcourt from '@/app/images/claimscourt1.png'
-// import icttechnical from '@/app/images/icttechnical.png'
-// import identity from '@/app/images/identity.png'
-// import jichma from '@/app/images/jichma.png'
-// import jiglogo from '@/app/images/jiglogo2.png'
-// import jmis from '@/app/images/jmis.png'
-// import kpis from '@/app/images/kpis.png'
-// import revenue from '@/app/images/revenue.png'
-// import socialregister from '@/app/images/socialregister.png'
-// import womenAffairs from '@/app/images/women_affairs1.png'
 import './styles.css'
 import BannerCarousel from "./components/banner-carousel";
+import { ministries } from "@/lib/exports";
+import homeBanner from '@/app/assets/images/home-banner.png'
+import { Button } from "@/components/ui/button"
+import { ArrowRight, BarChart2, Cpu, Globe, Smartphone } from "lucide-react"
+import jigawaLogo from '@/app/assets/images/jigawa-state.jpg'
+import Link from "next/link"
 
-const ministries =  [
-  {
-    id: 1,
-    url: "https://www.jigawastate.gov.ng/",
-    name: "State Official Website",
-    image: jgwebsite
-  },
-  {
-    id: 2,
-    url: "https://emis.jg.gov.ng",
-    name: "Education Management System",
-    image: emis
-  },
 
-  {
-    id: 4,
-    url: "https://oneapi.api.jg.gov.ng",
-    name: "Jigawa One Government Portal",
-    image: oneGp
-  },
-
-  {
-    id: 12,
-    url: "https://hemis.jg.gov.ng",
-    name: "Health Management Information System",
-    image: hmis
-  },
-  
-  {
-    id: 5,
-    url: "https://land.jg.gov.ng",
-    name: "Ministry of Land and Housing",
-    image: land
-  },
-
-  
-  {
-    id: 3,
-    url: "https://budget.jg.gov.ng",
-    name: "Ministry of Budget",
-    image: budget
-  },
- 
-
-  
-  {
-    id: 6,
-    url: "",
-    name: "Ministry of Informations, Youth Sport and Culture",
-    image: information
-  },
-  
-  {
-    id: 7,
-    url: "",
-    name: "Ministry of Special Duties",
-    image: specialduties
-  },
-  {
-    id: 8,
-    url: "https://finance.jg.gov.ng",
-    name: "Ministry of Finance ",
-    image: finance
-  },
-  {
-    id: 9,
-    url: "https://water.jg.gov.ng",
-    name: "Ministry of Water Resources",
-    image: water
-  },
-  {
-    id: 10,
-    url: "",
-    name: "Ministry of Agricultural Development",
-    image: agric
-  },
-  {
-    id: 11,
-    url: "",
-    name: "Climate Change and Digital Energy Information System",
-    image: climate
-  },
- 
-  {
-    id: 13,
-    url: "",
-    name: "Jigawa State Universal Basic Education Board ",
-    image: subeb
-  },
-  {
-    id: 14,
-    url: "",
-    name: "Ministry of Basic Education",
-    image: basic
-  },
-  {
-    id: 10,
-    url: "",
-    name: "Ministry of Budget",
-    image: budget
-  },
-  {
-    id: 10,
-    url: "",
-    name: "Jigawa Geographic Information System",
-    image: geo
-  },
-]
 
 interface Card {
     id: number 
@@ -152,16 +20,74 @@ interface Card {
 export default function Home() {
   return (
     <div className=" flex flex-col space-y-10 w-full">
+      <div className=" h-[90vh] w-full md:flex hidden mt-10" style={{
+        backgroundImage: `url(${homeBanner.src})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
+      </div>
 
-      <BannerCarousel />
+      {/* <BannerCarousel /> */}
       
-      <div className=" w-full max-w-6xl mx-auto pt-[50px] text-center items-center justify-center">
-       <div className=" flex px-6 flex-col space-y-4 justify-center bg my-auto items-center">
-        <Image src={jigawalogo} className=" h-36 w-36 rounded-full border-green-600 border-4" alt="" width={700} height={700} />
-       <h1 className=" text-2xl md:text-3xl font-semibold text-green-500 font-poppins ">Welcome to Jigawa State ICT and Digital Economy Service Portal </h1>
-       <span className=" text-xl font-poppins">Powered by the ICT and Digital Economy Office</span>
+      <div className=" w-full max-w-6xl h-[80vh] my-auto mx-auto pt-[50px] text-center items-center justify-center">
+        <div className=" flex px-6 flex-col h-full space-y-4 justify-center bg my-auto items-center">
+          <Image src={jigawaLogo} className=" h-36 w-36 object-cover rounded-full" alt="" width={700} height={700} />
+          <h1 className=" md:text-2xl text-xl font-semibold text-green-500 font-poppins ">Welcome to Jigawa State ICT and Digital Economy Service Portal </h1>
+          <span className=" text-xl font-poppins">Powered by the ICT and Digital Economy Office</span>
        </div>
       </div>
+
+      <section className="w-full py-12  md:py-24 lg:py-32 bg-white" id="initiatives">
+          <div className="container max-w-6xl mx-auto  px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Our Initiatives</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="flex flex-col items-center text-center space-y-2 p-4 bg-green-100 rounded-lg">
+                <Globe className="h-12 w-12 text-green-600" />
+                <h3 className="text-xl font-bold">Digital Infrastructure</h3>
+                <p className="text-gray-600">Expanding internet connectivity across Jigawa State.</p>
+              </div>
+              <div className="flex flex-col items-center text-center space-y-2 p-4 bg-blue-100 rounded-lg">
+                <Cpu className="h-12 w-12 text-blue-600" />
+                <h3 className="text-xl font-bold">Tech Education</h3>
+                <p className="text-gray-600">Empowering youth with digital skills and knowledge.</p>
+              </div>
+              <div className="flex flex-col items-center text-center space-y-2 p-4 bg-green-100 rounded-lg">
+                <Smartphone className="h-12 w-12 text-green-600" />
+                <h3 className="text-xl font-bold">E-Government</h3>
+                <p className="text-gray-600">Digitizing government services for efficiency and transparency.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+          <div className="container mx-auto max-w-6xl px-4 md:px-6">
+            <h2 className="text-3xl font-bold tracking-tighter font-poppins sm:text-4xl text-center mb-12">Our Impact</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="flex flex-col items-center space-y-2">
+                <BarChart2 className="h-12 w-12 text-green-600" />
+                <span className="text-4xl font-bold">50%</span>
+                <span className="text-gray-600 text-center">Increase in ICT adoption</span>
+              </div>
+              {/* <div className="flex flex-col items-center space-y-2">
+                <Globe className="h-12 w-12 text-blue-600" />
+                <span className="text-4xl font-bold">1000+</span>
+                <span className="text-gray-600 text-center">Wi-Fi hotspots installed</span>
+              </div> */}
+              <div className="flex flex-col items-center space-y-2">
+                <Cpu className="h-12 w-12 text-green-600" />
+                <span className="text-4xl font-bold">250+</span>
+                <span className="text-gray-600 text-center">Public Staffs trained in digital skills</span>
+              </div>
+              <div className="flex flex-col items-center space-y-2">
+                <Smartphone className="h-12 w-12 text-blue-600" />
+                <span className="text-4xl font-bold">70+</span>
+                <span className="text-gray-600 text-center">Government services digitized</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
     <div className=" w-full  max-w-7xl mx-auto">
         <div className=" grid grid-cols-1 md:grid-cols-4 px-4 gap-4 ">
            {
