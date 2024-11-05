@@ -53,11 +53,11 @@ export const Footer = () => {
                     <div className=' font-poppins w-full flex flex-col space-y-3 text-sm text-justify '>
                      <div className="">
                         <span className=' font-semibold mr-2 '>Misson:</span>
-                        To improve the delivery of Justice, through robustness and professionalism while maintaining synergy with all tiers of government.
+                        {/* To improve the delivery of Justice, through robustness and professionalism while maintaining synergy with all tiers of government. */}
                      </div>
                      <div className="">
                         <span className=' font-semibold mr-2 '>Misson:</span>
-                        Justice for all citizens consistent with the ideals of democracy and the rule of law.
+                        {/* Justice for all citizens consistent with the ideals of democracy and the rule of law. */}
                      </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@ export const Footer = () => {
                 <h1 className=' font-poppins font-semibold  '>Contact US </h1>
                    <div className=" flex flex-col space-y-4">
                    </div>
-                   
+
             </div>
             </div>
              

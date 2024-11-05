@@ -31,20 +31,20 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section style={{ backgroundImage: `url(${jigawaFlag.src})` }} className=" bg-contain bg-no-repeat bg-center bg-blend-overlay bg-white/50 py-20 h-[70vh] pt-20 px-4 sm:px-6 lg:px-8">
-        <div className="relative max-w-7xl grid grid-cols-2 space-x-4 space-y-4 items-center pt-20 mx-auto">
-            <div className=" flex items-center space-x-4 flex-row">
-              <Image src={governor} alt='' className=' h-[200px] rounded-full w-[200px] border-green-500 border-4 object-cover obj' width={700} height={700} />
+      <section style={{ backgroundImage: `url(${jigawaFlag.src})` }} className=" bg-contain bg-no-repeat bg-center bg-blend-overlay bg-white/50 py-20 h-full pt-20 px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl grid grid-cols-1 md:grid-cols-2 space-x-4 space-y-4 items-center pt-20 mx-auto">
+            <div className=" flex items-center space-x-4 flex-col justify-center text-center md:flex-row">
+              <Image src={governor} alt='' className=' h-[200px] bg-white rounded-full w-[200px] border-green-500 border-4 object-cover obj' width={700} height={700} />
               <div className=" flex flex-col ">
                 <h1 className=" text-lg font-poppins"> Jigawa State Governor</h1>
-                <p className=" text-gray-800 text-2xl font-bold">H.E Malam Umar A. Namadi,FCA</p>
+                <p className=" text-gray-800 text-lg md:text-2xl font-bold">H.E Malam Umar A. Namadi,FCA</p>
               </div>
             </div>
-            <div className=" flex items-center space-x-4 flex-row">
-              <Image src={deputy} alt='' className=' h-[200px] rounded-full w-[200px] border-green-500 border-4 object-contain object-left' width={700} height={700} />
+            <div className=" flex items-center space-x-4 flex-col justify-center text-center md:flex-row">
+              <Image src={deputy} alt='' className=' h-[200px] rounded-full bg-white w-[200px] border-green-500 border-4 object-contain object-left' width={700} height={700} />
               <div className=" flex flex-col ">
-                <h1 className=" text-lg font-poppins"> Jigawa State Governor</h1>
-                <p className=" text-gray-800 text-2xl font-bold">H.E Malam Umar A. Namadi,FCA</p>
+                <h1 className=" text-lg font-poppins">Deputy Governor of Jigawa State</h1>
+                <p className=" text-gray-800 text-lg md:text-2xl font-bold">H.E Engr. Aminu Usman</p>
               </div>
             </div>
         </div>

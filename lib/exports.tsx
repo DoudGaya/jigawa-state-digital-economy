@@ -1,6 +1,4 @@
 
-import Image, { StaticImageData } from "next/image";
-
 import oneGp from '@/app/images/1GP.png'
 import agric from '@/app/images/Agriculture.png'
 import climate from '@/app/images/Climate.png'
@@ -11,7 +9,6 @@ import basic from '@/app/images/basiceducation1.png'
 import budget from '@/app/images/budget1.png'
 import finance from '@/app/images/finance1.png'
 import information from '@/app/images/information.png'
-import jigawalogo from '@/app/images/jigawalogo.jpg'
 import jgwebsite from '@/app/images/jgwebsite1.png'
 import land from '@/app/images/land1.png'
 import specialduties from '@/app/images/specialduties.png'
