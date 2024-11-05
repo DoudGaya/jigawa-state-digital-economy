@@ -53,11 +53,9 @@ export const Footer = () => {
                     <div className=' font-poppins w-full flex flex-col space-y-3 text-sm text-justify '>
                      <div className="">
                         <span className=' font-semibold mr-2 '>Misson:</span>
-                        {/* To improve the delivery of Justice, through robustness and professionalism while maintaining synergy with all tiers of government. */}
-                     </div>
-                     <div className="">
-                        <span className=' font-semibold mr-2 '>Misson:</span>
                         {/* Justice for all citizens consistent with the ideals of democracy and the rule of law. */}
+                        To transform Jigawa into a leading digital economy in Nigeria by 2025, fostering innovation, creating job opportunities,
+                         and positioning our state at the forefront of technological advancement.
                      </div>
                     </div>
                 </div>
@@ -65,12 +63,24 @@ export const Footer = () => {
                     Follow us: Social media links
                 </div>
             </div>
-            <div className="  font-poppins lg:pr-10 py-14">
-            <div className=" space-y-4 my-4">
+            <div className="  font-poppins lg:pr-10">
+            <div className=" space-y-4">
                 <h1 className=' font-poppins font-semibold  '>Contact US </h1>
                    <div className=" flex flex-col space-y-4">
+                        <form className=' space-y-4'>
+                            <div className=" flex flex-col space-y-2">
+                                <label htmlFor="email" className=" font-poppins font-semibold">Email</label>
+                                <input type="email" name="email" id="email" className=" border-2 border-gray-400 rounded-md p-2" />
+                            </div>
+                            <div className=" flex flex-col space-y-2">
+                                <label htmlFor="message" className=" font-poppins font-semibold">Message</label>
+                                <textarea name="message" id="message" className=" border-2 border-gray-400 rounded-md p-2"></textarea>
+                            </div>
+                            <div className=" flex flex-col space-y-2">
+                                <button className=" bg-green-500 text-white rounded-md p-2">Send</button>
+                            </div>
+                        </form>
                    </div>
-
             </div>
             </div>
              
