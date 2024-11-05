@@ -23,7 +23,7 @@ const Topnav = () => {
           </Link>
 
           <div className=" md:flex space-x-6 hidden items-center">
-              <Link href={''} className=' font-poppins font-semibold'>Home</Link>
+              <Link href={'/'} className=' font-poppins font-semibold'>Home</Link>
               <Link href={'/about'} className=' font-poppins font-semibold'>About</Link>
               <Link href={'/activities'} className=' font-poppins font-semibold'>Activities</Link>
               <Link href={'/oneapi'} className=' font-poppins font-semibold bg-green-500 px-4 py-2 rounded-md text-white'>OneAPI</Link>
