@@ -85,14 +85,13 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-
     <div className=" w-full  max-w-7xl flex flex-col mx-auto">
           <div className=" flex flex-col px-10 py-12 rounded-md mx-auto max-w-4xl">
               <h1 className=" font-poppins font-bold text-xl text-center py-4">{`Jigawa State MDA's Digitalization`}</h1>
               <p className=" font-poppins text-center text-sm md:text-base text-gray-600">
                {` We are onboarding Jigawa State MDA's into our digital transformation journey. We have a centralized platform for all government services to improve efficiency and transparency and accountability.
-                The`} <Link className=" text-green-700 px-0.5 font-semibold hover:text-white hover:bg-green-600 " href={'/oneapi'}>OneAPI</Link>
+                The`}  <br />
+                <Link className=" text-green-700 px-0.5 font-semibold hover:text-white hover:bg-green-600 " href={'/oneapi'}> Jigawa State One Government ( OneAPI ) </Link>
               </p>
 
               <div className=" flex flex-col md:flex-row w-full space-y-4 md:space-y-0 space-x-0 md:space-x-4 py-3 items-center justify-center">

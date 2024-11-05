@@ -1,12 +1,12 @@
 // import { Button } from "@/components/ui/button"
 // import { Card, CardContent } from "@/components/ui/card"
 // import { Home, Key, DollarSign, Users, Star, PhoneCall } from "lucide-react"
+// import danModi from '@/app/assets/team/dan-modi.png'
 import Image from "next/image"
 import jigawaLogo from '@/app/assets/images/jg-logo-white.png'
 import rislan from '@/app/assets/team/rislan.jpg'
 import hashim from '@/app/assets/team/hashim.jpg'
 import governor from '@/app/assets/team/governor.png'
-// import danModi from '@/app/assets/team/dan-modi.png'
 import deputy from '@/app/assets/team/deputy.png'
 import murtala from '@/app/assets/team/murtala.jpg'
 import habib from '@/app/assets/team/habib.jpg'
