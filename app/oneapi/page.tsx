@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Home, Key, DollarSign, Users, Star, PhoneCall } from "lucide-react"
+// import { Button } from "@/components/ui/button"
+// import { Card, CardContent } from "@/components/ui/card"
+// import { Home, Key, DollarSign, Users, Star, PhoneCall } from "lucide-react"
 import Image from "next/image"
 import jigawaLogo from '@/app/assets/images/jg-logo-white.png'
 

@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
-import nigeria from '@/public/img/nigeria.png'
-import jigawa from '@/public/img/icons/jigawa-icon.png'
+// import nigeria from '@/public/img/nigeria.png'
+// import jigawa from '@/public/img/icons/jigawa-icon.png'
 import logo from '@/app/assets/images/gigital-economy-logo.jpg'
-import Link from 'next/link'
+// import Link from 'next/link'
 
 interface LinksUrls {
     id: number,
