@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Home, Key, DollarSign, Users, Star, PhoneCall } from "lucide-react"
+// import { Button } from "@/components/ui/button"
+// import { Card, CardContent } from "@/components/ui/card"
+// import { Home, Key, DollarSign, Users, Star, PhoneCall } from "lucide-react"
 import Image from "next/image"
 import jigawaLogo from '@/app/assets/images/jg-logo-white.png'
 import rislan from '@/app/assets/team/rislan.jpg'
@@ -37,7 +37,7 @@ export default function AboutUs() {
               <Image src={governor} alt='' className=' h-[200px] bg-white rounded-full w-[200px] border-green-500 border-4 object-cover obj' width={700} height={700} />
               <div className=" flex flex-col ">
                 <h1 className=" text-lg font-poppins"> Jigawa State Governor</h1>
-                <p className=" text-gray-800 text-lg md:text-2xl font-bold">H.E Malam Umar A. Namadi,FCA</p>
+                <p className=" text-gray-800 text-lg md:text-2xl font-bold">H.E Malam Umar A. Namadi, FCA</p>
               </div>
             </div>
             <div className=" flex items-center space-x-4 flex-col justify-center text-center md:flex-row">
