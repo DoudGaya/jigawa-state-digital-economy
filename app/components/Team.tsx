@@ -16,12 +16,12 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 const teamsSocials = [
     { social: { facebook: {
-      url: 'https://facebook.com/rislankanya',
+      url: '#',
       icon: <FaFacebookF />,
       
         },
         twitter: {
-            url: 'https://twitter.com/rislankanya',
+            url: '#',
             icon: <FaXTwitter />,
         },
         linkedin: {
@@ -34,12 +34,12 @@ const teamsSocials = [
         image: rislan 
     },
     { social: { facebook: {
-      url: 'https://facebook.com/rislankanya',
+      url: '#',
       icon: <FaFacebookF />,
       
     },
       twitter: {
-          url: 'https://twitter.com/rislankanya',
+          url: '#',
           icon: <FaXTwitter />,
       },
       linkedin: {
@@ -48,7 +48,7 @@ const teamsSocials = [
       }    
   }, name: "Hashim H Hashim", role: "Special Assistant to the Executive Governor of Jigawa State on ICT II", image: hashim},
     { social: { facebook: {
-      url: 'https://facebook.com/rislankanya',
+      url: '#',
       icon: <FaFacebookF />,
       
     },
