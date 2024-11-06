@@ -95,7 +95,8 @@ export default function Home() {
               </p>
 
               <div className=" flex flex-col md:flex-row w-full space-y-4 md:space-y-0 space-x-0 md:space-x-4 py-3 items-center justify-center">
-                <Link className="border-green-500 border w-full text-center px-3 py-2 rounded-md font-poppins " href={'/oneapi'}>Learn More</Link>
+                <Link className="border-green-500 border w-full text-center px-3 py-2 rounded-md font-poppins " href={'/oneapi'}>See the Docs 
+                </Link>
                 <Link href={'https://oneapi.api.jg.gov.ng'} className=" bg-green-500 w-full text-center px-3 py-2 rounded-md font-poppins text-white " target="_blank">Get Started</Link>
               </div>
           </div>
