@@ -621,12 +621,12 @@ export const ministries =  [
       image: emis
     },
   
-    {
-      id: 4,
-      url: "https://oneapi.api.jg.gov.ng",
-      name: "Jigawa One Government Portal",
-      image: oneGp
-    },
+    // {
+    //   id: 4,
+    //   url: "https://oneapi.api.jg.gov.ng",
+    //   name: "Jigawa One Government Portal",
+    //   image: oneGp
+    // },
   
     {
       id: 12,

@@ -48,7 +48,7 @@ const Topnav = () => {
                           Home
                         </SheetTrigger>
                    </Link>
-                    <Link href={'/About'} className=' font-poppins font-semibold py-2'>
+                    <Link href={'/about'} className=' font-poppins font-semibold py-2'>
                         <SheetTrigger>
                               About
                           </SheetTrigger>
