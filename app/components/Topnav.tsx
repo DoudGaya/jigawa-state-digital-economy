@@ -15,9 +15,9 @@ import {
 
 const Topnav = () => {
   return (
-    <div className=' w-full shadow-md py-3 fixed top-0 z-10 bg-white px-4 border-b'>
+    <div className=' w-full dark:text-gray-900 shadow-md py-3 fixed top-0 z-10 bg-white px-4 border-b'>
         <div className=" max-w-7xl mx-auto flex justify-between ">
-          <Link href={''} className=' flex space-x-3 items-center'>
+          <Link href={'/'} className=' flex space-x-3 items-center'>
           <Image src={jigawaLogo} alt='' className=' h-12 object-contain max-w-max object-left rounded-full' width={700} height={700} />
             {/* <p className='font-poppins font-semibold '></p> */}
           </Link>
@@ -37,10 +37,10 @@ const Topnav = () => {
             </SheetTrigger>
             <SheetContent side={'left'}>
               <SheetHeader className=' flex flex-col'>
-                <Link href={''} className=' flex space-x-3 items-center'>
-                <Image src={jigawalogo} alt='' className=' h-12 w-12 border-2 border-green-400 rounded-full' width={700} height={700} />
-                  <p className='font-poppins font-semibold '>Jigawa Portals</p>
-                </Link>
+              <   Link href={'/'} className=' flex space-x-3 items-center'>
+                  <Image src={jigawaLogo} alt='' className=' h-12 object-contain max-w-max object-left rounded-full' width={700} height={700} />
+                    {/* <p className='font-poppins font-semibold '></p> */}
+                  </Link>
 
                 <div className="flex flex-col space-y-1 items-start my-4">
                     <Link href={'/'} className=' font-poppins font-semibold py-2'>

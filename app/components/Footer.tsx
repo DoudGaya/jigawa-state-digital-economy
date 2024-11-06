@@ -38,7 +38,7 @@ import logo from '@/app/assets/images/gigital-economy-logo.jpg'
 
 export const Footer = () => {
   return (
-    <div className=' w-full px-4 bg-white mt-20 '>
+    <div className=' w-full px-4 dark:text-gray-900 bg-white mt-20 '>
         <div className=" grid gap-6 grid-cols-1 md:grid-cols-2 gap-x-6 max-w-5xl mx-auto py-10">
             <div className=" flex flex-col">
                 <div className=" border-b-2 border-jyellow flex flex-col  space-y-3 py-1">

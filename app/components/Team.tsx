@@ -7,7 +7,75 @@ import deputy from '@/app/assets/team/deputy.png'
 import murtala from '@/app/assets/team/murtala.jpg'
 import habib from '@/app/assets/team/habib.jpg'
 import jigawaFlag from '@/app/assets/images/ng-flag.png'
+import { FaFacebookF } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa";
 
+
+
+
+const teamsSocials = [
+    { social: { facebook: {
+      url: 'https://facebook.com/rislankanya',
+      icon: <FaFacebookF />,
+      
+        },
+        twitter: {
+            url: 'https://twitter.com/rislankanya',
+            icon: <FaXTwitter />,
+        },
+        linkedin: {
+            url: 'https://www.linkedin.com/in/dr-rislan-kanya/',
+            icon: <FaLinkedinIn />,
+        }    
+    },    
+  name: "Dr. Rislan Abdulazeez Kanya", 
+        role: "Special Assistant to the Executive Governor of Jigawa State on ICT", 
+        image: rislan 
+    },
+    { social: { facebook: {
+      url: 'https://facebook.com/rislankanya',
+      icon: <FaFacebookF />,
+      
+    },
+      twitter: {
+          url: 'https://twitter.com/rislankanya',
+          icon: <FaXTwitter />,
+      },
+      linkedin: {
+          url: 'https://www.linkedin.com/in/hashim-h-hashim/',
+          icon: <FaLinkedinIn />,
+      }    
+  }, name: "Hashim H Hashim", role: "Special Assistant to the Executive Governor of Jigawa State on ICT II", image: hashim},
+    { social: { facebook: {
+      url: 'https://facebook.com/rislankanya',
+      icon: <FaFacebookF />,
+      
+    },
+      twitter: {
+          url: '#',
+          icon: <FaXTwitter />,
+      },
+      linkedin: {
+          url: 'https://www.linkedin.com/in/hashim-h-hashim/',
+          icon: <FaLinkedinIn />,
+      }    
+  }, name: "Murtala Lawan", role: "Special Assistant tothe Jigawa State Governor on ICT and Digital Economy", image: murtala },
+    { social: { facebook: {
+      url: '#',
+      icon: <FaFacebookF />,
+      
+    },
+      twitter: {
+          url: '#',
+          icon: <FaXTwitter />,
+      },
+      linkedin: {
+          url: 'https://www.linkedin.com/in/habib-kani-60b4088a/',
+          icon: <FaFacebookF />,
+      }    
+  }, name: "Habib Kani", role: "Special Assistant tothe Jigawa State Governor on ICT and Digital Economy", image: habib },
+  ]
 
 
 const Team = () => {
@@ -37,12 +105,7 @@ const Team = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">Meet Our Team</h2>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              { name: "Dr. Rislan Abdulazeez Kanya", role: "Special Assistant to the Executive Governor of Jigawa State on ICT", image: rislan },
-              { name: "Hashim H Hashim", role: "Special Assistant to the Executive Governor of Jigawa State on ICT II", image: hashim},
-              { name: "Murtala Lawan", role: "Special Assistant tothe Jigawa State Governor on ICT and Digital Economy", image: murtala },
-              { name: "Habib Kani", role: "Special Assistant tothe Jigawa State Governor on ICT and Digital Economy", image: habib },
-            ].map((member, index) => (
+            {teamsSocials.map((member, index) => (
               <div key={index} className=" py-6 text-center">
                 <img
                   className="mx-auto h-40 w-40 rounded-md object-cover border-2 border-green-500 xl:h-56 xl:w-56"
@@ -52,6 +115,17 @@ const Team = () => {
                 <div className="mt-6">
                   <p className="text-sm text-green-600 font-poppins font-medium">{member.role}</p>
                   <h3 className="text-lg font-medium font-poppins text-gray-900">{member.name}</h3>
+                </div>
+                <div className=" flex w-full  items-center justify-center space-x-4">
+                    <a href={member.social.facebook.url} className="text-gray-500 hover:text-green-600" target="_blank" rel="noopener noreferrer">
+                        {member.social.facebook.icon}
+                    </a>
+                    <a href={member.social.twitter.url} className="text-gray-500 hover:text-green-600" target="_blank" rel="noopener noreferrer">
+                        {member.social.twitter.icon}
+                    </a>
+                    <a href={member.social.linkedin.url} className="text-gray-500 hover:text-green-600" target="_blank" rel="noopener noreferrer">
+                        {member.social.linkedin.icon}
+                    </a>
                 </div>
               </div>
             ))}
