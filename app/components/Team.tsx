@@ -60,19 +60,20 @@ const teamsSocials = [
           url: 'https://www.linkedin.com/in/hashim-h-hashim/',
           icon: <FaLinkedinIn />,
       }    
-  }, name: "Murtala Lawan", role: "Special Assistant tothe Jigawa State Governor on ICT and Digital Economy", image: murtala },
-    { social: { facebook: {
-      url: '#',
-      icon: <FaFacebookF />,
-      
-    },
+    }, name: "Murtala Lawan", role: "Special Assistant tothe Jigawa State Governor on ICT and Digital Economy", image: murtala },
+     { social: { facebook: 
+        {
+          url: '#',
+          icon: <FaFacebookF />,
+          
+        },
       twitter: {
           url: '#',
           icon: <FaXTwitter />,
       },
       linkedin: {
           url: 'https://www.linkedin.com/in/habib-kani-60b4088a/',
-          icon: <FaFacebookF />,
+          icon: <FaLinkedinIn />,
       }    
   }, name: "Habib Kani", role: "Special Assistant tothe Jigawa State Governor on ICT and Digital Economy", image: habib },
   ]
@@ -99,7 +100,6 @@ const Team = () => {
             </div>
         </div>
       </section>
-
       {/* Team Section */}
       <section className="py-20 bg-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -108,7 +108,7 @@ const Team = () => {
             {teamsSocials.map((member, index) => (
               <div key={index} className=" py-6 text-center">
                 <img
-                  className="mx-auto h-40 w-40 rounded-md object-cover border-2 border-green-500 xl:h-56 xl:w-56"
+                  className="mx-auto h-40 w-40 rounded-full object-cover border-2 border-green-500 xl:h-56 xl:w-56"
                   src={member.image.src}
                   alt={member.name}
                 />

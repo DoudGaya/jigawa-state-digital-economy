@@ -5,6 +5,7 @@ import homeBanner from '@/app/assets/images/home-banner.png'
 import { BarChart2, Cpu, Globe, Smartphone } from "lucide-react"
 import jigawaLogo from '@/app/assets/images/jigawa-state.jpg'
 import Link from "next/link"
+import Team from "./components/Team";
 
 
 
@@ -35,7 +36,7 @@ export default function Home() {
           <span className=" text-xl font-poppins">Powered by the ICT and Digital Economy Office</span>
        </div>
       </div>
-
+      <Team />
       <section className="w-full py-12  md:py-24 lg:py-32 bg-white" id="initiatives">
           <div className="container max-w-6xl mx-auto  px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Our Initiatives</h2>

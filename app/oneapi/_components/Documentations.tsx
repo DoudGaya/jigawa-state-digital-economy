@@ -71,7 +71,7 @@ export default function Documentations() {
           </ul>
         </nav>
       </aside> */}
-    <h1 className="text-3xl text-center md:text-start font-bold">JigawaOneAPI Documentation</h1>
+    <h1 className="text-2xl md:text-start font-bold">JigawaOneAPI Documentation</h1>
     <p>
         All developers are required to use an API key to access the JigawaOneAPI. To obtain an API key, please contact the Jigawa State Ministry of ICT and Digital Economy.
         Records are stored in a database and can be accessed using the API which can only be accessed by authorized users. Ministries and agencies can access the API to retrieve information about indigenes of Jigawa State.
@@ -99,18 +99,7 @@ export default function Documentations() {
             ))}
           </ul>
         </div>
-        <header className="bg-white dark:bg-gray-900 p-4 flex justify-between items-center">
-          <Button
-            variant="outline"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setSidebarOpen(!sidebarOpen)}
-            aria-label="Toggle sidebar"
-          >
-            <Menu className="h-4 w-4" />
-          </Button>
 
-        </header>
         <main className=" flex w-full py-6 text-wrap bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
           <ScrollArea className="h-full w-full text-wrap">
             {endpoints.map((endpoint) => (
@@ -254,6 +243,29 @@ export default function Documentations() {
             ))}
           </ScrollArea>
         </main>
+        <div className=" flex flex-col space-y-6 justify-center ">
+            <h3 className=' text-2xl font-semibold font-poppins'>API Endpoints</h3>
+            <ul className=" flex flex-wrap gap-4">
+            {endpoints.map((endpoint) => (
+            <li key={endpoint.name}>
+                <button
+                className={`w-full text-left p-2 text-xs bg-gray-200 rounded ${
+                    activeEndpoint === endpoint.name
+                    ? 'bg-green-500 text-white'
+                    : 'hover:bg-gray-200 dark:hover:bg-gray-700'
+                }`}
+                onClick={() => {
+                    setActiveEndpoint(endpoint.name)
+                    setSidebarOpen(false)
+                }}
+                >
+                {endpoint.name}
+                </button>
+            </li>
+            ))}
+            </ul>
+        </div>
+
       </div>
     </div>
   )
