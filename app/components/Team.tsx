@@ -30,7 +30,7 @@ const teamsSocials = [
         }    
     },    
   name: "Dr. Rislan Abdulazeez Kanya", 
-        role: "Special Assistant to the Executive Governor of Jigawa State on ICT", 
+        role: "Technical Assistant to the Executive Governor of Jigawa State on ICT", 
         image: rislan 
     },
     { social: { facebook: {
