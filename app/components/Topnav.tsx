@@ -43,19 +43,19 @@ const Topnav = () => {
                 </Link>
 
                 <div className="flex flex-col space-y-1 items-start my-4">
-                    <Link href={''} className=' font-poppins font-semibold py-2'>
+                    <Link href={'/'} className=' font-poppins font-semibold py-2'>
                         <SheetTrigger>
                           Home
                         </SheetTrigger>
                    </Link>
-                    <Link href={''} className=' font-poppins font-semibold py-2'>
+                    <Link href={'/About'} className=' font-poppins font-semibold py-2'>
                         <SheetTrigger>
-                              Solutions
+                              About
                           </SheetTrigger>
                         </Link>
-                    <Link href={''} className=' font-poppins font-semibold py-2'>
+                    <Link href={'/activities'} className=' font-poppins font-semibold py-2'>
                         <SheetTrigger>
-                          Management
+                          Activities
                         </SheetTrigger>
                     </Link>
                 </div>

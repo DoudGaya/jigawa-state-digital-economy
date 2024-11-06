@@ -194,7 +194,7 @@ export default function Documentation() {
                     </ul>
                   </div>
                   <p><strong>Message:</strong> A message providing more details about the status of the request.</p>
-                  <p><strong>Result:</strong> Contains the indigene's information if the request was successful. If the request failed, this will be false.</p>
+                  <p><strong>Result:</strong> {`Contains the indigene's information if the request was successful. If the request failed, this will be false.`}</p>
                 </section>
 
                 <section className="space-y-4">
