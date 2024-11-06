@@ -134,7 +134,7 @@ export default function Documentations() {
                   <section className="space-y-4">
                     <h3 className="text-2xl font-semibold">Request Headers</h3>
                     <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
-                      <code className="text-sm font-mono">api_key: Your API key (required)</code>
+                      <code className="text-sm font-mono">apiKey: Your API key (required)</code>
                     </div>
                   </section>
 

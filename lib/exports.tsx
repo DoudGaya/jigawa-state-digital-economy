@@ -382,6 +382,7 @@ export const endpoints = [
       }
     }
   },
+
   {
     name: "Personal and Address Info",
     path: "/api/v2/personal-and-address-info",
@@ -421,6 +422,7 @@ export const endpoints = [
       }
     }
   },
+
   {
     name: "Personal and Family Info",
     path: "/api/v2/personal-and-family-info",
@@ -463,6 +465,7 @@ export const endpoints = [
       }
     }
   },
+
   {
     name: "Personal and Identity Info",
     path: "/api/v2/personal-and-identity-info",
@@ -503,6 +506,7 @@ export const endpoints = [
       }
     }
   },
+
   {
     name: "Personal and Parent Info",
     path: "/api/v2/personal-and-parent-info",
@@ -540,6 +544,7 @@ export const endpoints = [
       }
     }
   },
+
   {
     name: "Personal and NOK Info",
     path: "/api/v2/personal-and-nok-info",
@@ -582,6 +587,7 @@ export const endpoints = [
       }
     }
   },
+  
   {
     name: "Custom Info",
     path: "/api/v2/custom-info",
