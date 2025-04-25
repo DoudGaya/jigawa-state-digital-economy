@@ -260,7 +260,6 @@ export function ApplicationForm({ student }: ApplicationFormProps) {
                     value={formData.nameOfMinistry}
                     onChange={handleChange}
                     placeholder="Name of Ministry / Institute / Agency"
-                    required
                   />
                 </div>
             </>
@@ -275,7 +274,6 @@ export function ApplicationForm({ student }: ApplicationFormProps) {
               value={formData.placeOfWork}
               onChange={handleChange}
               placeholder="What is your current place of work?"
-              required
             />
           </div>
 
@@ -290,7 +288,6 @@ export function ApplicationForm({ student }: ApplicationFormProps) {
             value={formData.experience}
             onChange={handleChange}
             placeholder="Describe your relevant work experience"
-            required
           />
         </div>
           </>
@@ -359,7 +356,7 @@ export function ApplicationForm({ student }: ApplicationFormProps) {
           <Input
             id="gitHubProfileUrl"
             name="gitHubProfileUrl"
-            type="text"
+            type="link"
             value={formData.gitHubProfileUrl}
             onChange={handleChange}
             placeholder="https://github.com/yourusername"
@@ -375,7 +372,6 @@ export function ApplicationForm({ student }: ApplicationFormProps) {
             value={formData.experience}
             onChange={handleChange}
             placeholder="Describe details about your skills technical skills (Optional) "
-            required
           />
         </div>
              
