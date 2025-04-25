@@ -11,15 +11,17 @@ export default function ApplicationPage() {
       <div className="container py-10 mx-auto px-4">
         <div className="mx-auto max-w-4xl flex flex-col space-y-6">
           <div className="p-6 text-center bg-green-200/20 rounded-lg border-green-800/50 border text-green-700">
-            <h1 className="text-2xl font-bold">Jigawa State Government ICT and Digital Economy Skills Development</h1>
-            <p className="mt-2">Informatics Institute Advanced Diploma Graduate Data Collection</p>
+            <h1 className="text-2xl font-bold">
+            Invitation to Apply for Jigawa State Government ICT and Digital Economy Skills Development Program
+            </h1>
+            {/* <p className="mt-2">Informatics Institute Advanced Diploma Graduate Data Collection</p> */}
           </div>
 
           {/* Program Information */}
           <div className="p-6 bg-white border rounded-lg border-green-700/70 shadow-md space-y-6">
             <div className="space-y-4">
               <h2 className="text-xl font-semibold text-green-800">
-                Invitation to Apply for Jigawa State Government ICT and Digital Economy Skills Development Program
+                {/* Invitation to Apply for Jigawa State Government ICT and Digital Economy Skills Development Program */}
               </h2>
               <p className="text-gray-700">
                 The Office of the Technical Adviser on ICT and Digital Economy, in collaboration with the Ministry of

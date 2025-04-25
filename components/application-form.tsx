@@ -37,7 +37,7 @@ export function ApplicationForm({ student }: ApplicationFormProps) {
     experience: "",
     skills: "",
     gitHubProfileUrl: '',
-    doYouHaveTechnicalSkills: "",
+    // doYouHaveTechnicalSkills: "",
     nameOfMinistry: "",
     techSkillsDetails: "",
     employmentStatus: "",
@@ -72,7 +72,7 @@ export function ApplicationForm({ student }: ApplicationFormProps) {
         gitHubProfileUrl: formData.gitHubProfileUrl,
         employmentStatus: formData.employmentStatus,
         nameOfMinistry: formData.nameOfMinistry,
-        doYouHaveTechnicalSkills: formData.doYouHaveTechnicalSkills,
+        // doYouHaveTechnicalSkills: formData.doYouHaveTechnicalSkills,
         yearOfGraduation: student.yearOfGraduation,
         classOfAward: student.classOfAward,
       })
@@ -222,6 +222,8 @@ export function ApplicationForm({ student }: ApplicationFormProps) {
             <SelectContent>
               <SelectItem value="Employed">Employed</SelectItem>
               <SelectItem value="Unemployed">Unemployed</SelectItem>
+              <SelectItem value="Student">Student</SelectItem>
+              <SelectItem value="Retired">Retired</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -257,7 +259,7 @@ export function ApplicationForm({ student }: ApplicationFormProps) {
                     type="text"
                     value={formData.nameOfMinistry}
                     onChange={handleChange}
-                    placeholder="Name of Ministry?"
+                    placeholder="Name of Ministry / Institute / Agency"
                     required
                   />
                 </div>
@@ -296,7 +298,7 @@ export function ApplicationForm({ student }: ApplicationFormProps) {
 
       
 
-        <div className="space-y-2">
+        {/* <div className="space-y-2">
           <Label htmlFor="doYouHaveTechnicalSkills">Do you have any technical skill?</Label>
           <Select
             name="doYouHaveTechnicalSkills"
@@ -311,11 +313,11 @@ export function ApplicationForm({ student }: ApplicationFormProps) {
               <SelectItem value="No">No</SelectItem>
             </SelectContent>
           </Select>
-        </div>
+        </div> */}
 
 
-        {formData.doYouHaveTechnicalSkills === "Yes" && (
-            <>
+        {/* {formData.doYouHaveTechnicalSkills === "Yes" && (
+            <> */}
 
       <div className="space-y-2">
           <Label htmlFor="skills">Select Your Tecnical Skills</Label>
@@ -360,8 +362,7 @@ export function ApplicationForm({ student }: ApplicationFormProps) {
             type="text"
             value={formData.gitHubProfileUrl}
             onChange={handleChange}
-            placeholder="https://github.com/"
-            required
+            placeholder="https://github.com/yourusername"
           />
         </div>
        
@@ -378,9 +379,9 @@ export function ApplicationForm({ student }: ApplicationFormProps) {
           />
         </div>
              
-            </>
+            {/* </>
           )}
-       
+        */}
 
       
        

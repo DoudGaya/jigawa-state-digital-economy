@@ -28,7 +28,7 @@ interface ApplicationData {
   email: string
   phone: string
   address: string
-  doYouHaveTechnicalSkills: string
+  // doYouHaveTechnicalSkills: string
   techSkillsDetails: string | null
   DateOfBirth: string
   nameOfMinistry: string
@@ -117,7 +117,7 @@ export async function submitApplication(data: ApplicationData): Promise<Applicat
         classOfAward: data.classOfAward,
         email: data.email,
         DateOfBirth: data.DateOfBirth,
-        doYouHaveTechnicalSkills: data.doYouHaveTechnicalSkills,
+        // doYouHaveTechnicalSkills: data.doYouHaveTechnicalSkills,
         techSkillsDetails: data.techSkillsDetails,
         gitHubProfileUrl: data.gitHubProfileUrl,
         workExperience: data.experience,

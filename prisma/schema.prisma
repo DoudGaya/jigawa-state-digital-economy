@@ -118,7 +118,6 @@ model Application {
   nameOfMinistry                    String?
   gitHubProfileUrl                  String?
   techSkillsDetails                 String?
-  doYouHaveTechnicalSkills          String
   experience                        String?
   skills                            String?
   submittedAt                       DateTime @default(now())
