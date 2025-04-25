@@ -158,9 +158,6 @@ export function ApplicationForm({ student }: ApplicationFormProps) {
             required
           />
         </div>
-
-       
-
         <div className="space-y-2">
           <Label htmlFor="dateOfBirth">Date of Birth</Label>
           <Input
