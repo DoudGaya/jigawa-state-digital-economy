@@ -3,6 +3,7 @@ import React from 'react'
 // import nigeria from '@/public/img/nigeria.png'
 // import jigawa from '@/public/img/icons/jigawa-icon.png'
 import logo from '@/app/assets/images/gigital-economy-logo.jpg'
+import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa'  
 // import Link from 'next/link'
 
 // interface LinksUrls {
@@ -34,6 +35,21 @@ import logo from '@/app/assets/images/gigital-economy-logo.jpg'
 //     },
 // ]
 
+const SocialLinks = [
+    {
+        id: 1,
+        title: 'Facebook',
+        url: 'https://web.facebook.com/jigawa.digital.economy',
+        icon: <FaFacebook className=' text-blue-600 size-7' />
+    },
+    {
+        id: 3,
+        title: 'LinkedIn',
+        url: 'https://www.linkedin.com/company/jigawa-state-ict-and-digital-economy/',
+        icon: <FaLinkedin className=' text-blue-400 size-7' />
+    },
+]
+
 
 
 export const Footer = () => {
@@ -59,8 +75,15 @@ export const Footer = () => {
                      </div>
                     </div>
                 </div>
-                <div className=" flex flex-row space-x-2">
-                    Follow us: Social media links
+                <div className=" flex flex-row items-center space-x-2">
+                   <p> Follow us:                    </p>
+                    {
+                        SocialLinks.map((link) => (
+                            <a key={link.id} href={link.url} target='_blank' rel='noreferrer' className=' text-gray-900 hover:text-green-900'>
+                                {link.icon}
+                            </a>
+                        ))
+                    }
                 </div>
             </div>
             <div className="  font-poppins lg:pr-10">
