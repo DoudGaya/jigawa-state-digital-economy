@@ -27,9 +27,9 @@ const PagesBanner = ( {message, subtitle}: {message: string, subtitle: string}) 
 
           <div className="flex items-center space-x-4">
             <div className="flex w-full text-center justify-center md:justify-start space-x-6">
-              <div className="flex items-center space-x-2 text-green-900 font-poppins font-semibold text-lg">
+              {/* <div className="flex items-center space-x-2 text-green-900 font-poppins font-semibold text-lg">
                 Application
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

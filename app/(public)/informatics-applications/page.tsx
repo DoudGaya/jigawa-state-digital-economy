@@ -6,7 +6,7 @@ export default function ApplicationPage() {
     <div className="flex flex-col py-12">
       <PagesBanner
         subtitle=""
-        message="Jigawa State Government ICT and Digital Economy Skills Development"
+        message="Jigawa State Government ICT and Digital Economy Skills Development Application"
       />
       <div className="container py-10 mx-auto px-4">
         <div className="mx-auto max-w-4xl flex flex-col space-y-6">
