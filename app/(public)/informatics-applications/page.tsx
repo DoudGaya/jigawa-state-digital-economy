@@ -5,7 +5,7 @@ export default function ApplicationPage() {
   return (
     <div className="flex flex-col py-12">
       <PagesBanner
-        subtitle="Office of The Technical Adviser on ICT and Digital Economy in Collaboration with Ministry of Higher Education, Science and Technology"
+        subtitle=""
         message="Jigawa State Government ICT and Digital Economy Skills Development"
       />
       <div className="container py-10 mx-auto px-4">
