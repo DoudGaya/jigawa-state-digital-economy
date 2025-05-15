@@ -15,6 +15,7 @@ export const publicRoutes = [
     '/gallery',
     '/news/:slug',
     '/impact',
+    '/academics',
     '/kpi',
     '/informatics-applications',
     '/news',
