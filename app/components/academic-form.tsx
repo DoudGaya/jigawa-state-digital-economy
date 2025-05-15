@@ -1,16 +1,13 @@
 "use client"
 
 import { CommandGroup } from "@/components/ui/command"
-
 import { CommandEmpty } from "@/components/ui/command"
-
 import { useState } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { submitAcademicForm } from "@/actions/academics"
 import { z } from "zod"
 import { Check, ChevronsUpDown } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
@@ -26,6 +23,7 @@ import { disciplines, jigawaStateLGAs, ranks } from "@/lib/form-data"
 const formSchema = z.object({
   firstName: z.string().min(2, { message: "First name must be at least 2 characters." }),
   surname: z.string().min(2, { message: "Surname must be at least 2 characters." }),
+  email: z.string().min(2, { message: "Email must be at least 2 characters." }),
   otherName: z.string().optional(),
   institution: z.string().min(2, { message: "Institution is required." }),
   sex: z.enum(["Male", "Female", "Other"], {
@@ -50,6 +48,7 @@ export function AcademicForm() {
       firstName: "",
       surname: "",
       otherName: "",
+      email: '',
       institution: "",
       lga: "",
       whatsappNo: "",
@@ -98,7 +97,7 @@ export function AcademicForm() {
                     </FormControl>
                     <FormMessage />
                   </FormItem>
-                )}
+                )}    
               />
 
               <FormField
@@ -116,7 +115,8 @@ export function AcademicForm() {
               />
             </div>
 
-            <FormField
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <FormField
               control={form.control}
               name="otherName"
               render={({ field }) => (
@@ -129,6 +129,20 @@ export function AcademicForm() {
                 </FormItem>
               )}
             />
+              <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Email</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Email address" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <FormField

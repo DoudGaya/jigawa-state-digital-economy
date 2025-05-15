@@ -7,8 +7,8 @@ export default function Academics() {
   return (
     <main className="">
     <PagesBanner
-        subtitle="Academic Application Form"
-        message="Jigawa State Government ICT and Digital Economy Skills Development Application"
+        subtitle="Data collection not application"
+        message="Jigawa Academic Forum"
       />
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mb-6 text-center">Academic Application Form</h1>

@@ -76,6 +76,7 @@ model Academic {
   lga         String
   discipline  String
   rank        String
+  email       String
   whatsappNo  String
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
