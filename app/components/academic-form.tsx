@@ -174,7 +174,7 @@ export function AcademicForm() {
                       <SelectContent>
                         <SelectItem value="Male">Male</SelectItem>
                         <SelectItem value="Female">Female</SelectItem>
-                        <SelectItem value="Other">Other</SelectItem>
+                        {/* <SelectItem value="Other">Other</SelectItem> */}
                       </SelectContent>
                     </Select>
                     <FormMessage />
