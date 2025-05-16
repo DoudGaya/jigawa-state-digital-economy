@@ -11,7 +11,7 @@ export default function Academics() {
         message="Jigawa Academic Forum"
       />
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold mb-6 text-center">Academic Application Form</h1>
+        {/* <h1 className="text-3xl font-bold mb-6 text-center"></h1> */}
         <AcademicForm />
       </div>
     </main>
