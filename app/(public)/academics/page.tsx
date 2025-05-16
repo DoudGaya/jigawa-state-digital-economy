@@ -7,14 +7,12 @@ export default function Academics() {
   return (
     <main className="">
       <PagesBanner
-        subtitle="Data collection not application"
+        subtitle="Data collection"
         message="Jigawa Academic Forum"
       />
       <div className="max-w-3xl mx-auto">
         {/* <h1 className="text-3xl font-bold mb-6 text-center"></h1> */}
-        <AcademicForm />
-        
-        <div className="mt-12 mb-10 bg-gradient-to-r from-green-50 to-indigo-50 border-t-4 border-green-500 rounded-lg shadow-md p-6">
+          <div className="mt-12 mb-10 bg-gradient-to-r from-green-50 to-indigo-50 border-t-4 border-green-500 rounded-lg shadow-md p-6">
           <h3 className="text-lg font-semibold text-gray-800 mb-3">Dear Colleagues,</h3>
           
           <p className="text-gray-700 mb-4">
@@ -46,6 +44,9 @@ export default function Academics() {
             <span className="text-green-700 font-semibold">Jigawa ICT & Digital Economy Office</span>
           </p>
         </div>
+        <AcademicForm />
+        
+      
       </div>
     </main>
   )
