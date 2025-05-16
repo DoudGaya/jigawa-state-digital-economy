@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import '../styles.css'
 import { ministries } from "@/lib/exports";
-import { BarChart2, Cpu, Globe, Smartphone } from "lucide-react"
+import { BarChart2, Cpu, Globe, Smartphone, Info } from "lucide-react"
 import jigawaLogo from '@/app/assets/images/jigawa-state.jpg'
 import Link from "next/link"
 import Team from "../components/Team";
@@ -36,6 +36,51 @@ export default function Home() {
        </div>
       </div>
       <Team />
+      
+      {/* Information Section - Added Below Team Section */}
+      <section className="w-full py-12 bg-gradient-to-r from-green-50 to-blue-50">
+        <div className="container max-w-6xl mx-auto px-4 md:px-6">
+          <div className="flex flex-col md:flex-row items-center gap-8 p-6 border-l-4 border-green-500 bg-white rounded-lg shadow-md">
+            <div className="flex-shrink-0">
+              <div className="p-3 bg-green-100 rounded-full">
+                <Info className="h-8 w-8 text-green-600" />
+              </div>
+            </div>
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-gray-800 font-poppins">Dear Colleagues,</h3>
+              
+              <p className="text-gray-700">
+                Following the recommendation made during our recent interactive session with His Excellency, 
+                it was agreed that a data collection tool should be developed to enable the gathering of 
+                information on academics for potential future engagements and collaboration.
+              </p>
+              
+              <p className="text-gray-700">
+                In response, a dedicated form has been created to support this initiative. Kindly take a 
+                few moments to complete the form with your details to facilitate further engagement:
+              </p>
+              
+              <div className="pt-2 pb-4">
+                <Link 
+                  href="/academics"
+                  className="inline-flex items-center px-5 py-2.5 bg-green-600 hover:bg-green-700 text-white font-medium rounded-md transition duration-150 ease-in-out"
+                >
+                  <span className="mr-2">👉</span> Complete the Form
+                </Link>
+              </div>
+              
+              <div className="text-gray-700">
+                <p>We appreciate your support and look forward to continued collaboration.</p>
+                <p className="mt-2">
+                  <span className="font-medium">Best regards,</span><br />
+                  <span className="text-green-700 font-semibold font-poppins">Jigawa ICT & Digital Economy Office</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <section className="w-full py-12  md:py-24 lg:py-32 bg-white" id="initiatives">
           <div className="container max-w-6xl mx-auto  px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12">Our Initiatives</h2>
