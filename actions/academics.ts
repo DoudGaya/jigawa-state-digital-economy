@@ -15,8 +15,10 @@ const academicFormSchema = z.object({
   sex: z.enum(["Male", "Female", "Other"]),
   lga: z.string().min(2),
   discipline: z.string(),
+  otherDiscipline: z.string().optional(),
+  teachingExperience: z.string().min(10),
   rank: z.string(),
-  whatsappNo: z.string().regex(/^(\+234|0)[0-9]{10}$/),
+  whatsappNo: z.string().regex(/^(\+234|0|234)[0-9]{10}$/),
 })
 
 type AcademicFormData = z.infer<typeof academicFormSchema>
@@ -37,6 +39,7 @@ export async function submitAcademicForm(formData: AcademicFormData) {
         email: validatedData.email,
         lga: validatedData.lga,
         discipline: validatedData.discipline,
+        teachingExperience: validatedData.teachingExperience,
         rank: validatedData.rank,
         whatsappNo: validatedData.whatsappNo,
       },

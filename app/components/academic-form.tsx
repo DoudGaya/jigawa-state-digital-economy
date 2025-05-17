@@ -2,7 +2,7 @@
 
 import { CommandGroup } from "@/components/ui/command"
 import { CommandEmpty } from "@/components/ui/command"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { submitAcademicForm } from "@/actions/academics"
@@ -17,6 +17,7 @@ import { Command, CommandInput, CommandItem, CommandList } from "@/components/ui
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
 import { cn } from "@/lib/utils"
 import { toast } from "sonner"
+import { Textarea } from "@/components/ui/textarea"
 
 import { disciplines, jigawaStateLGAs, ranks } from "@/lib/form-data"
 
@@ -31,6 +32,8 @@ const formSchema = z.object({
   }),
   lga: z.string().min(2, { message: "LGA is required." }),
   discipline: z.string({ required_error: "Please select a discipline." }),
+  otherDiscipline: z.string().optional(),
+  teachingExperience: z.string().min(10, { message: "Teaching experience must be at least 10 characters." }),
   rank: z.string({ required_error: "Please select a rank." }),
   whatsappNo: z.string().regex(/^(\+234|0|234)[0-9]{10}$/, {
     message: "WhatsApp number must be in format 08012345678 or +2348012345678.",
@@ -41,6 +44,7 @@ type FormValues = z.infer<typeof formSchema>
 
 export function AcademicForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [showOtherDiscipline, setShowOtherDiscipline] = useState(false)
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -51,13 +55,28 @@ export function AcademicForm() {
       email: '',
       institution: "",
       lga: "",
+      discipline: "",
+      otherDiscipline: "",
+      teachingExperience: "",
       whatsappNo: "",
     },
   })
 
+  // Watch the discipline field to show/hide the "Other Discipline" field
+  const selectedDiscipline = form.watch("discipline")
+  
+  useEffect(() => {
+    setShowOtherDiscipline(selectedDiscipline === "other")
+  }, [selectedDiscipline])
+
   async function onSubmit(data: FormValues) {
     setIsSubmitting(true)
     try {
+      // If "Other" is selected, use the custom discipline value
+      if (data.discipline === "other" && data.otherDiscipline) {
+        data.discipline = data.otherDiscipline
+      }
+      
       const result = await submitAcademicForm(data)
 
       if (result.success) {
@@ -183,20 +202,6 @@ export function AcademicForm() {
               />
             </div>
 
-            {/* <FormField
-              control={form.control}
-              name="lga"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>LGA (Local Government Area)</FormLabel>
-                  <FormControl>
-                    <Input placeholder="Your LGA" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            /> */}
-
              <FormField
                 control={form.control}
                 name="lga"
@@ -239,7 +244,7 @@ export function AcademicForm() {
                           className={cn("justify-between", !field.value && "text-muted-foreground")}
                         >
                           {field.value
-                            ? disciplines.find((discipline) => discipline.value === field.value)?.label
+                            ? disciplines.find((discipline) => discipline.value === field.value)?.label || field.value
                             : "Select discipline"}
                           <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                         </Button>
@@ -278,6 +283,22 @@ export function AcademicForm() {
               )}
             />
 
+            {showOtherDiscipline && (
+              <FormField
+                control={form.control}
+                name="otherDiscipline"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Specify Discipline</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Please specify your discipline" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+            )}
+
             <FormField
               control={form.control}
               name="rank"
@@ -298,6 +319,24 @@ export function AcademicForm() {
                       ))}
                     </SelectContent>
                   </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name="teachingExperience"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Teaching Experience</FormLabel>
+                  <FormControl>
+                    <Textarea 
+                      placeholder="Briefly state your teaching, research, professional practice, or extension services focus" 
+                      className="min-h-[120px]"
+                      {...field} 
+                    />
+                  </FormControl>
                   <FormMessage />
                 </FormItem>
               )}

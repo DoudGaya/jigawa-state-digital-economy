@@ -82,6 +82,10 @@ export const disciplines = [
   { value: "veterinary-medicine", label: "Veterinary Medicine" },
   { value: "water-resources-management", label: "Water Resources Management" },
   { value: "zoology", label: "Zoology" },
+  {value: 'Education Psychology', label: 'Education Psychology'},
+  {value: 'Education Curriculum', label: 'Education Curriculum'},
+  {value: 'Education Admin and Planning', label: 'Education Admin and Planning'},
+  { value: "other", label: "Other" },
 ]
 
 export const ranks = [
