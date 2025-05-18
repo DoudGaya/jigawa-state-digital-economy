@@ -1,72 +1,77 @@
 "use client"
-import React, { useEffect, useCallback, useState } from 'react'
-import Link from 'next/link'
-import { BeatLoader } from 'react-spinners'
-import { useSearchParams } from 'next/navigation'
-// import { emailVerification } from '@/actions/email-verification'
-import { emailVerification } from '@/actions/email-verification'
-import { FormError } from '@/components/FormError'
-import { FormSuccess } from '@/components/FormSuccess'
 
-const EmailVerification = () => {
+import { useCallback, useEffect, useState } from "react"
+import { Suspense } from "react"
+import { useSearchParams } from "next/navigation"
+import { emailVerification } from "@/actions/email-verification"
+import { FormError } from "@/components/FormError"
+import { FormSuccess } from "@/components/FormSuccess"
+import { BoxLoader } from "@/components/BoxLoader"
+import Link from "next/link"
 
-
-  const [error, setError] = useState<string | undefined>()
-  const [success, setSuccess] = useState<string | undefined>()
-
+function EmailVerificationClient() {
   const searchParams = useSearchParams()
-
-  const token = searchParams.get("token");
-
-  const onSubmit = useCallback(() => {
-
-
-    if (!token){
-      setError("Missing token")
-      return;
+  const [error, setError] = useState<string | undefined>("")
+  const [success, setSuccess] = useState<string | undefined>("")
+  const [isLoading, setIsLoading] = useState(true)
+  
+  const token = searchParams.get("token")
+  
+  const onSubmit = useCallback(async () => {
+    if (!token) {
+      setError("Missing token!")
+      setIsLoading(false)
+      return
     }
-    emailVerification(token)
-    .then((data) => {
-      setSuccess(data.success)
-      setError(data.error)
-    }).catch(() => {
-      setError("Something Went Wrong!")
-    })
-  }, [token, success, error])
-
+    
+    try {
+      const data = await emailVerification(token)
+      
+      if (data.error) {
+        setError(data.error)
+      }
+      
+      if (data.success) {
+        setSuccess(data.success)
+      }
+    } catch (error) {
+      setError("Something went wrong!")
+    } finally {
+      setIsLoading(false)
+    }
+  }, [token])
+  
   useEffect(() => {
     onSubmit()
   }, [onSubmit])
-
+  
   return (
-    <div>
-      <div className=" max-w-3xl flex items-center space-y-2 justify-center flex-col text-center py-20 bg-white px-10 drop-shadow-md rounded-lg ">
-        <h1 className=' text-2xl font-semibold'>Welcome to JICTDE</h1>
-          {!success && !error && (
-            <div className=" flex space-y-2 items-center text-center flex-col py-3">
-              <p>Confirming your Email</p>
-              <BeatLoader loading={true} size={8} className='' color='#ffda48'  />
-            </div>
-          )}
-
-          {
-            success ? (
-              <FormError message={error} />
-              ) : (
-                <>
-                  <FormSuccess message={success}/>
-                    <Link href={'/login'} className=' bg-green-500 text-white px-6 py-2 rounded-md'>
-                        Back to Log In
-                    </Link>
-             </>
-              )
+    <div className="flex flex-col items-center justify-center h-full">
+      {isLoading ? (
+        <BoxLoader />
+      ) : (
+        <div className="flex flex-col items-center space-y-4">
+          <FormError message={error} />
+          <FormSuccess message={success} />
           
-          }
-       
-      </div>
+          {success && (
+            <Link 
+              href="/login" 
+              className="text-center py-2 px-6 bg-green-600 hover:bg-green-700 text-white rounded-md"
+            >
+              Login
+            </Link>
+          )}
+        </div>
+      )}
     </div>
   )
 }
 
-export default EmailVerification
- 
+export default function EmailVerificationPage() {
+  return (
+    <Suspense fallback={<BoxLoader />}>
+      <EmailVerificationClient />
+    </Suspense>
+  )
+}
