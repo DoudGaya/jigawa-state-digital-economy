@@ -7,18 +7,18 @@ export const logOut = async () => {
   // Get the session to check if user is authenticated
   const session = await auth()
   if (session) {
-    // Clear all auth-related cookies
-    const cookieStore = cookies()
-    cookieStore.getAll().forEach((cookie) => {
-      if (cookie.name.includes("next-auth")) {
-        cookieStore.delete(cookie.name)
-      }
-    })
-
-    // Sign out with redirect
-    await signOut({ 
-      redirectTo: "/",  // Specify your login page route
-      redirect: true
-    })
+    // In Next.js 15, we should use the Auth.js signOut function 
+    // which will properly clear the session and cookies
+    try {
+      await signOut({ 
+        redirectTo: "/",
+        redirect: true
+      })
+    } catch (error) {
+      console.error("Error during sign out:", error)
+      // Fallback if signOut doesn't redirect
+      return { success: false, error: "Failed to sign out" }
+    }
   }
+  return { success: true }
 }
