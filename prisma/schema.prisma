@@ -75,7 +75,7 @@ model Academic {
   sex                String
   lga                String
   discipline         String
-  teachingExperience String
+  teachingExperience String?
   rank               String
   email              String
   whatsappNo         String

@@ -16,7 +16,8 @@ const HomeDashboard = async () => {
     galleries,
     news,
     activities,
-    authors
+    authors,
+    academics
   } = await getAllRecords()
 
 
@@ -53,6 +54,11 @@ const HomeDashboard = async () => {
       id: 5,
       title: "Authors",
       count: authors.length
+    },
+     {
+      id: 6,
+      title: "Academics",
+      count: academics.length
     }
   ]
 

@@ -1,4 +1,4 @@
-import { Blinds, PencilLine, LayoutGrid, Images, Siren, User} from "lucide-react"
+import { Blinds, PencilLine, LayoutGrid, Images, Siren, User, GraduationCap} from "lucide-react"
 
 import logo from '@/app/assets/images/jictde.png'
 import LogoutButton from "./auth/LogOutButton"
@@ -33,6 +33,11 @@ const homes = [
       title: "Activities ",
       url: "/user/activities",
       icon: PencilLine,
+    },
+      {
+      title: "Academics",
+      url: "/user/academics",
+      icon: GraduationCap,
     },
   ]
 
