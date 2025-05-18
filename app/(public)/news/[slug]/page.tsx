@@ -12,7 +12,8 @@ interface NewsPageParams {
 }
 
 export async function generateMetadata({ params }: NewsPageParams): Promise<Metadata> {
-  const news = await getNewsBySlug(params.slug) as NewsType
+  const p = await params
+  const news = await getNewsBySlug(p.slug) as NewsType
   return {
     title: news.title,
     description: news.content.substring(0, 160),
