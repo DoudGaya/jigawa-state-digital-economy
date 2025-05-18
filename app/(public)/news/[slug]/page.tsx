@@ -1,3 +1,12 @@
+import React from 'react'
+
+const page = () => {
+  return (
+    <div></div>
+  )
+}
+
+export default page
 // import { Metadata } from 'next'
 // import SingleNewsCard from '../_components/SingleNewsCard'
 // import { NewsType } from '@/typings'
