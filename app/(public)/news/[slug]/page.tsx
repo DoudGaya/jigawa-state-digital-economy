@@ -26,7 +26,8 @@ export async function generateMetadata({ params }: NewsPageParams): Promise<Meta
 }
 
 export default async function NewsPage({ params }: NewsPageParams) {
-  const news = await getNewsBySlug(params.slug) as NewsType
+  const p = await params
+  const news = await getNewsBySlug(p.slug) as NewsType
   return (
     <div className="">
         <NewsBanner 
